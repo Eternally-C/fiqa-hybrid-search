@@ -1,0 +1,21 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# VS Code local settings
+.vscode/
+
+# macOS generated files
+.DS_Store
+
+# Reproducible model/data caches
+data/cache/
+
+# Temporary files
+*.log
+*.tmp

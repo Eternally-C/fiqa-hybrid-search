@@ -1,0 +1,25 @@
+# Tested with Python 3.11.17 on macOS Apple Silicon.
+# Direct dependencies plus selected model-stack dependencies.
+# Test-time environment snapshot: results/final_evaluation_environment.txt
+
+# Numerical processing and result tables
+numpy==2.4.6
+pandas==3.0.6
+
+# Sparse retrieval
+rank-bm25==0.2.2
+
+# Dense retrieval and neural reranking
+torch==2.14.1
+sentence-transformers==6.1.0
+
+# Underlying model, tokenizer, and Hugging Face Hub libraries
+transformers==5.18.0
+tokenizers==0.23.2
+huggingface-hub==1.33.0
+
+# FiQA dataset loading
+datasets==5.1.0
+
+# Result visualization
+matplotlib==3.11.2

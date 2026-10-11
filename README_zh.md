@@ -82,7 +82,7 @@ BM25 权重 0.10 在[已记录的 11 个 Validation 候选权重](results/hybrid
 
 分段评分部分恢复了该案例的表现，但仍低于 Hybrid，也未提高整体 Validation 表现。尚未确认截断是排序退化的唯一原因。
 
-完整案例与分数见 [Validation 实验记录（整理于最终 Test 之前）](results/validation_experiments.md)。逐查询数据：[整篇重排](results/reranking_error_analysis.csv)和[分段重排](results/passage_reranking_error_analysis.csv)。
+完整案例与分数见 [Validation 实验记录](results/validation_experiments.md)。逐查询数据：[整篇重排](results/reranking_error_analysis.csv)和[分段重排](results/passage_reranking_error_analysis.csv)。
 
 ## 环境与安装
 
@@ -157,6 +157,7 @@ fiqa_hybrid_search/
 ├── requirements.txt
 ├── README.md
 ├── README_zh.md
+├── LICENSE
 └── .gitignore
 ```
 
@@ -166,3 +167,7 @@ fiqa_hybrid_search/
 - 已记录模型名称和依赖版本，但代码未固定 Hugging Face 模型 revision。
 - 重排结论仅适用于已评估的模型和分段配置。可能存在的不完整标注仍需独立核验；所有指标继续使用未修改的原始 qrels。
 - 尚未开展统计显著性检验或运行耗时评估。
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE)。

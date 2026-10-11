@@ -1,15 +1,17 @@
 # Validation 实验记录
 
-项目：Hybrid Semantic Search and Neural Reranking for Financial Question Answering  
-记录整理日期：2026-10-09  
-当前范围：Retrieval、Cross-Encoder Reranking 与 Error Analysis
+项目：Hybrid Semantic Search and Neural Reranking for Financial Question Answering
+
+记录范围：Retrieval、Cross-Encoder Reranking 与 Error Analysis
+
+> **完成状态：** Validation 实验与错误分析已完成；最终方法与参数已在 Test 前依据 Validation 锁定，最终 Test 评估已完成。本文汇总 Validation 结果，固定方案与最终 Test 指标见[最终评估方案与完成记录](final_evaluation_plan.md)和[Test 结果](test_baselines.csv)。
 
 ## 1. 评估设置
 
 - 数据集：BEIR FiQA-2018。
 - 本阶段评估使用全部 500 条 Validation 查询。
 - 当前开发与分析入口只加载 Validation qrels。
-- Test 最终评估尚待完成，本记录不包含 Test 结果。
+- Test 最终评估已在方案与参数锁定后完成；本文汇总 Validation 实验，最终 Test 指标见[Test 结果](test_baselines.csv)。
 - 指标按查询计算后取平均：Recall@10、Recall@100、MRR@10、binary nDCG@10。
 - 方案比较以 Validation nDCG@10 为主要依据。
 - 使用预训练模型推理，本阶段未进行模型微调。
@@ -146,7 +148,7 @@ Dense + Cross-Encoder 与 Weighted Hybrid + Cross-Encoder 的四项汇总指标�
 - 可能存在不完整标注，但目前没有完成系统性人工核验。
 - 尚未完成统计显著性检验或运行耗时评估，不声称差异显著，也不报告性能开销数值。
 - 重排实验作为有证据的负面实验保留。
-- 当前 Validation 最佳方案的确认，不等同于已经完成最终模型锁定或 Test 评估。
+- 最终采用 Weighted Hybrid；方法与参数在 Test 前依据 Validation 确定。Test 评估已完成，其结果不用于后续调参或模型选择。
 
 ## 7. 证据文件
 

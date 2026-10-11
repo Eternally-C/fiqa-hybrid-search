@@ -1,5 +1,8 @@
 # Hybrid Semantic Search and Neural Reranking for Financial Question Answering
 
+[English](README.md) | [中文](README_zh.md)
+
+
 A financial document retrieval project on BEIR FiQA-2018, comparing BM25, dense semantic retrieval, weighted Reciprocal Rank Fusion (RRF), and neural reranking. Models are used for inference without fine-tuning.
 
 ## Results
@@ -80,7 +83,7 @@ Per-query nDCG@10 changes relative to Weighted Hybrid across all 500 Validation 
 
 Passage scoring partially recovered this case, but remained below Hybrid and did not improve overall Validation performance. Truncation was not isolated as the sole cause of the regression.
 
-Detailed cases and scores: [Validation experiment record, prepared before final Test](results/validation_experiments.md). Per-query data: [whole-document](results/reranking_error_analysis.csv) and [passage-based](results/passage_reranking_error_analysis.csv).
+Detailed cases and scores: [Validation experiment record](results/validation_experiments.md). Per-query data: [whole-document](results/reranking_error_analysis.csv) and [passage-based](results/passage_reranking_error_analysis.csv).
 
 ## Environment and Installation
 
@@ -154,6 +157,8 @@ fiqa_hybrid_search/
 ├── results/             # CSVs, figures and experiment records
 ├── requirements.txt
 ├── README.md
+├── README_zh.md
+├── LICENSE
 └── .gitignore
 ```
 
@@ -163,3 +168,7 @@ fiqa_hybrid_search/
 - Model names and dependency versions are recorded, but Hugging Face model revisions are not pinned in code.
 - Reranking conclusions apply to the evaluated model and passage configuration. Possible incomplete qrels annotations require independent verification; reported metrics use the unchanged original labels.
 - Statistical significance and runtime performance have not been assessed.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
